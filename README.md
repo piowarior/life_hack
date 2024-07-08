@@ -1,5 +1,5 @@
 # **History**
-## **php artisan migrate:fresh --seed**
+### **php artisan migrate:fresh --seed**
 
 ``` intinya mah ini buat tabel baru di postman nya yang sebleum nya di apus ```
 
