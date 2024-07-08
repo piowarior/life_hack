@@ -7,12 +7,12 @@
 ``` ini kalo ada yang salah kek gak bisa koneksi ke pemweb gitu pake ini aja ```
 
 ## **git clone https://github.com/piowarior/history**
-``` ini buat clone repo baru biar bisa conect ke ubuntu versi sigma wsl ``` 
+``` ini buat clone repo baru biar bisa conect ke ubuntu versi wsl ``` 
 
 sebelum nya harus buat repo manual atau kita buat sendiri lewat terminal wsl
 
 ## **history**
-``` buat liat history kita, tapi pas buka laptop skibidi sigma saat itu ```
+``` buat liat history kita, tapi pas buka laptop saat itu ```
 
 
 
