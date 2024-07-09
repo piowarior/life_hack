@@ -14,5 +14,7 @@ sebelum nya harus buat repo manual atau kita buat sendiri lewat terminal wsl
 ## **history**
 ``` buat liat history kita, tapi pas buka laptop saat itu ```
 
+## **php artisan make:model ``` nama produk ``` -mcs --resource**
 
+``` ini fungsinya buat sebuah model baru yang akan di tambahkan dalam model vs code kita sebenrnya tanpa --resource geh bisa tapi nantinya pokok nya ribet di `nama produk` controler kita ```
 
