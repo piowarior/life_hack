@@ -18,3 +18,9 @@ sebelum nya harus buat repo manual atau kita buat sendiri lewat terminal wsl
 
 ``` ini fungsinya buat sebuah model baru yang akan di tambahkan dalam model vs code kita sebenrnya tanpa --resource geh bisa tapi nantinya pokok nya ribet di `nama produk` controler kita ```
 
+
+## **git remote set-url origin git@github.com:piowarior/````nama repo````
+
+```` fungsi nya untuk agarr kita bisa meng git push file kita ke repo sehabis clone repo kita soal nya kalo gak pake ini pasti program meminta kita memsukkan pw , id gituan lah  ````
+
+`:smile:`
