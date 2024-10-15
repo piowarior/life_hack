@@ -200,3 +200,725 @@ const b = 10;</pre>                     |
 | `<link rel="..." href="...">...<link>` | Menyediakan link ke sumber eksternal seperti CSS. | ```html<br>&lt;link rel="stylesheet" href="styles.css"&gt;<br>```                                       | (Link ke stylesheet)                           |
 | `<meta name="..." content="...">...<meta>` | Menyediakan metadata untuk elemen dokumen, seperti deskripsi dan kata kunci. | ```html<br>&lt;meta name="description" content="Deskripsi halaman"&gt;<br>```                        | (Metadata disetel)                            |
 | `<title>...<title>`                    | Menyediakan judul untuk dokumen yang ditampilkan di bilah judul browser. | ```html<br>&lt;title&gt;Judul Halaman&lt;/title&gt;<br>```                                             | <title>Judul Halaman</title>                  |
+
+
+
+
+
+### **At-Rules yang Sering Digunakan**
+
+1. **`@charset`**:
+   - **Kegunaan**: Menentukan karakter encoding file CSS.
+   - **Contoh Penggunaan**: Dalam file CSS untuk memastikan encoding yang benar.
+
+2. **`@import`**:
+   - **Kegunaan**: Mengimpor stylesheet eksternal ke dalam file CSS.
+   - **Contoh Penggunaan**: Umum digunakan untuk mengimpor font atau stylesheet tambahan.
+
+3. **`@media`**:
+   - **Kegunaan**: Media queries untuk menerapkan gaya berdasarkan kondisi layar atau perangkat.
+   - **Contoh Penggunaan**: Desain responsif yang menyesuaikan tampilan berdasarkan ukuran layar.
+
+4. **`@supports`**:
+   - **Kegunaan**: Mengecek dukungan browser terhadap fitur CSS tertentu sebelum menerapkan gaya.
+   - **Contoh Penggunaan**: Menerapkan gaya modern hanya jika didukung oleh browser.
+
+5. **`@font-face`**:
+   - **Kegunaan**: Mendefinisikan font khusus yang dapat digunakan dalam dokumen.
+   - **Contoh Penggunaan**: Menggunakan font yang di-host secara lokal atau dari web.
+
+6. **`@keyframes`**:
+   - **Kegunaan**: Mendefinisikan animasi CSS.
+   - **Contoh Penggunaan**: Membuat animasi transisi atau pergerakan elemen.
+
+7. **`@page`**:
+   - **Kegunaan**: Menyusun gaya untuk halaman saat dicetak.
+   - **Contoh Penggunaan**: Menyesuaikan margin atau ukuran halaman untuk pencetakan.
+
+8. **`@namespace`**:
+   - **Kegunaan**: Mendeklarasikan namespace XML dalam CSS.
+   - **Contoh Penggunaan**: Umum digunakan dalam dokumen yang mengandung SVG atau XML.
+
+9. **`@layer`** (baru tapi semakin populer):
+   - **Kegunaan**: Mengelola lapisan prioritas dalam CSS.
+   - **Contoh Penggunaan**: Untuk manajemen konflik gaya yang lebih baik dalam proyek besar.
+
+### **At-Rules yang Jarang Digunakan**
+
+1. **`@counter-style`**:
+   - **Kegunaan**: Mendefinisikan gaya penomoran daftar kustom.
+   - **Contoh Penggunaan**: Digunakan dalam pembuatan daftar yang unik, seperti numerik atau simbol kustom.
+
+2. **`@document`** (deprecated):
+   - **Kegunaan**: Menerapkan gaya untuk dokumen atau URL tertentu.
+   - **Contoh Penggunaan**: Sekarang jarang digunakan karena telah deprecated.
+
+3. **`@viewport`**:
+   - **Kegunaan**: Mengontrol pengaturan viewport di berbagai perangkat.
+   - **Contoh Penggunaan**: Mengelola aspek viewport seperti zooming, meskipun jarang digunakan secara langsung.
+
+4. **`@region`** (experimental):
+   - **Kegunaan**: Menghubungkan gaya ke bagian tertentu dari konten yang mengalir.
+   - **Contoh Penggunaan**: Digunakan dalam layout kompleks.
+
+5. **`@property`**:
+   - **Kegunaan**: Mendefinisikan properti CSS kustom.
+   - **Contoh Penggunaan**: Digunakan untuk memperluas kemampuan variabel CSS.
+
+6. **`@custom-media`** (experimental):
+   - **Kegunaan**: Mendefinisikan kondisi media kustom untuk media queries.
+   - **Contoh Penggunaan**: Mengurangi redundansi dalam media queries.
+
+7. **`@color-profile`**:
+   - **Kegunaan**: Mendefinisikan profil warna.
+   - **Contoh Penggunaan**: Penting dalam pekerjaan desain grafis dan pencetakan yang sangat khusus.
+
+8. **`@container`** (baru dan masih experimental):
+   - **Kegunaan**: Menggunakan container queries untuk membuat gaya yang bergantung pada ukuran kontainer.
+   - **Contoh Penggunaan**: Masih dalam pengembangan dan eksperimental, tetapi potensial untuk desain modular.
+
+9. **`@scope`** (experimental):
+   - **Kegunaan**: Mengisolasi aturan CSS dalam scope tertentu.
+   - **Contoh Penggunaan**: Membantu dalam komponen yang bergaya secara independen, masih jarang digunakan.
+
+10. **`@font-feature-values`** dan variannya (`@swash`, `@ornaments`, `@annotation`, dll.):
+    - **Kegunaan**: Mendefinisikan dan mengontrol fitur tertentu dalam font.
+    - **Contoh Penggunaan**: Sangat khusus dan jarang ditemui di luar pekerjaan tipografi profesional.
+
+11. **`@nest`** (experimental):
+    - **Kegunaan**: Menyusun aturan CSS bersarang.
+    - **Contoh Penggunaan**: Eksperimental dan belum diadopsi secara luas.
+
+12. **`@custom-selector`** (experimental):
+    - **Kegunaan**: Mendefinisikan selector CSS kustom.
+    - **Contoh Penggunaan**: Eksperimental dan jarang digunakan.
+
+13. **`@when`** dan **`@else`** (experimental):
+    - **Kegunaan**: Conditional grouping rules.
+    - **Contoh Penggunaan**: Masih jarang karena eksperimental.
+
+Aturan yang sering digunakan adalah dasar untuk pengembangan CSS sehari-hari, sedangkan yang jarang digunakan biasanya lebih spesifik untuk kebutuhan tertentu atau eksperimental, dan belum didukung secara luas di berbagai browser.
+
+
+Meskipun tidak ada sebanyak 50 at-rules dalam spesifikasi CSS saat ini, berikut adalah daftar yang mencakup hampir semua at-rule yang ada, termasuk yang umum digunakan, eksperimental, dan yang jarang ditemui. Daftar ini juga mencakup varian atau penggunaan spesifik dari at-rule yang mungkin dianggap berbeda dalam konteks tertentu:
+
+1. **`@charset`** - Menentukan karakter encoding.
+2. **`@import`** - Mengimpor file CSS.
+3. **`@namespace`** - Mendefinisikan namespace.
+4. **`@media`** - Media queries untuk kondisi spesifik.
+5. **`@supports`** - Mendukung fitur CSS tertentu.
+6. **`@font-face`** - Mengimpor dan mendefinisikan font custom.
+7. **`@keyframes`** - Mendefinisikan animasi.
+8. **`@page`** - Gaya untuk pencetakan halaman.
+9. **`@counter-style`** - Gaya penomoran daftar kustom.
+10. **`@document`** (deprecated) - Gaya untuk dokumen spesifik.
+11. **`@viewport`** - Mengontrol aspek viewport.
+12. **`@region`** (experimental) - Menghubungkan gaya ke bagian tertentu dari konten yang mengalir.
+13. **`@property`** - Mendefinisikan properti CSS kustom.
+14. **`@layer`** - Mengelola lapisan prioritas dalam CSS.
+15. **`@color-profile`** - Mendefinisikan profil warna.
+16. **`@container`** - Menggunakan container queries.
+17. **`@custom-media`** (experimental) - Mendefinisikan media queries kustom.
+18. **`@scope`** (experimental) - Mengisolasi aturan CSS dalam scope tertentu.
+19. **`@media screen`** - Varian media queries untuk layar.
+20. **`@media print`** - Varian media queries untuk pencetakan.
+21. **`@media speech`** - Varian media queries untuk speech output.
+22. **`@font-feature-values`** - Mendefinisikan nilai fitur font.
+23. **`@swash`** - Bagian dari `@font-feature-values` untuk swash glyphs.
+24. **`@ornaments`** - Bagian dari `@font-feature-values` untuk glyph ornament.
+25. **`@annotation`** - Bagian dari `@font-feature-values` untuk annotation glyphs.
+26. **`@stylistic`** - Bagian dari `@font-feature-values` untuk gaya stylistic.
+27. **`@styleset`** - Bagian dari `@font-feature-values` untuk set gaya.
+28. **`@character-variant`** - Bagian dari `@font-feature-values` untuk varian karakter.
+29. **`@ligatures`** - Bagian dari `@font-feature-values` untuk ligatur.
+30. **`@discretionary-ligatures`** - Bagian dari `@font-feature-values` untuk ligatur diskresioner.
+31. **`@historical-ligatures`** - Bagian dari `@font-feature-values` untuk ligatur historis.
+32. **`@stylistic-sets`** - Bagian dari `@font-feature-values` untuk set gaya stylistic.
+33. **`@media handheld`** (deprecated) - Varian media queries untuk perangkat genggam.
+34. **`@media all`** - Varian media queries untuk semua media.
+35. **`@media projection`** (deprecated) - Varian media queries untuk proyektor.
+36. **`@font-variation-settings`** - Mendefinisikan variasi font.
+37. **`@swash`** - Mendefinisikan swash glyphs.
+38. **`@ornaments`** - Mendefinisikan ornament glyphs.
+39. **`@annotation`** - Mendefinisikan annotation glyphs.
+40. **`@stylistic`** - Mendefinisikan fitur stylistic dalam font.
+41. **`@styleset`** - Mendefinisikan set gaya dalam font.
+42. **`@character-variant`** - Mendefinisikan varian karakter dalam font.
+43. **`@feature`** (deprecated) - Fitur dalam font.
+44. **`@viewport rule`** - Mengontrol viewport properties (varian).
+45. **`@custom-selector`** (experimental) - Mendefinisikan selector CSS kustom.
+46. **`@custom-media`** - Mendefinisikan media queries kustom (varian).
+47. **`@nest`** (experimental) - Nested CSS rules.
+48. **`@scope rule`** - Scope untuk gaya CSS (varian).
+49. **`@when`** (experimental) - Conditional grouping rule.
+50. **`@else`** (experimental) - Conditional grouping for `@when`.
+
+Meskipun daftar di atas mencakup varian dan penggunaan spesifik, tidak ada lebih dari 50 at-rule unik dalam CSS saat ini. Beberapa dari aturan ini adalah eksperimental atau jarang digunakan dalam praktek sehari-hari dan mungkin tidak didukung secara luas di berbagai browser.
+
+# --------------------------------------------------------------------------------------------------------
+
+Tentu! Berikut adalah penjelasan awal tentang **CSS at-rules**, termasuk definisi umum, kegunaan, serta penjelasan mendalam dan contoh masing-masing at-rule dengan tingkat kesulitan yang berbeda.
+
+---
+
+## **Penjelasan Awal: CSS At-Rules**
+
+**CSS at-rules** adalah instruksi khusus dalam CSS yang dimulai dengan tanda `@` diikuti oleh nama aturan dan seringkali diakhiri dengan blok deklarasi dalam kurung kurawal `{}`. Aturan ini digunakan untuk menambahkan fitur atau pengaturan khusus yang mempengaruhi bagaimana gaya diterapkan pada halaman web. At-rules dapat mengatur encoding, mengimpor file CSS, mengatur animasi, dan banyak lagi.
+
+**Kegunaan**: 
+1. **Definisi**: Mengatur gaya berdasarkan fitur spesifik atau kondisi.
+2. **Pengaturan**: Menyediakan cara untuk mengatur bagaimana elemen ditampilkan atau diproses.
+3. **Optimisasi**: Mengelola bagaimana gaya diterapkan dan dikompilasi untuk performa yang lebih baik.
+
+---
+
+### 1. **`@charset`**
+
+- **Penjelasan**: Mendefinisikan encoding karakter yang digunakan dalam file CSS. Ini penting untuk memastikan bahwa karakter khusus seperti aksen atau simbol ditampilkan dengan benar.
+
+- **Analogi**: `@charset` seperti memilih bahasa yang akan digunakan dalam buku. Jika buku ditulis dalam bahasa Inggris, maka semua pembaca harus mengerti bahasa Inggris agar bisa memahami isinya.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @charset "UTF-8";
+    ```
+    - **Penjelasan**: Mendeklarasikan bahwa file CSS menggunakan encoding UTF-8, yang mendukung berbagai karakter internasional.
+    - **Hasil**: File CSS bisa menggunakan karakter khusus dari berbagai bahasa.
+
+  - **Sedang**:
+    ```css
+    @charset "ISO-8859-1";
+    ```
+    - **Penjelasan**: Mengatur encoding ke ISO-8859-1, yang mendukung karakter Latin Eropa Barat.
+    - **Hasil**: File CSS dapat menggunakan karakter-karakter khusus dari bahasa Latin Eropa.
+
+  - **Rumit**:
+    ```css
+    @charset "Windows-1252";
+    ```
+    - **Penjelasan**: Menggunakan encoding Windows-1252, yang sering digunakan dalam sistem Windows.
+    - **Hasil**: Dukungan karakter tambahan seperti simbol mata uang Euro atau karakter khusus Eropa.
+
+### 2. **`@import`**
+
+- **Penjelasan**: Mengimpor file CSS lain ke dalam stylesheet yang aktif. Ini memungkinkan pemecahan gaya ke dalam beberapa file untuk organisasi yang lebih baik.
+
+- **Analogi**: `@import` seperti mengundang seseorang ke acara. Anda memberi tahu siapa yang harus hadir, dan mereka membawa apa yang mereka butuhkan untuk berpartisipasi.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @import url("styles.css");
+    ```
+    - **Penjelasan**: Mengimpor file CSS `styles.css` ke dalam stylesheet yang aktif.
+    - **Hasil**: Gaya dari `styles.css` diterapkan ke halaman.
+
+  - **Sedang**:
+    ```css
+    @import url("https://example.com/styles.css");
+    ```
+    - **Penjelasan**: Mengimpor file CSS dari URL eksternal.
+    - **Hasil**: Gaya dari file yang di-host secara online diterapkan ke halaman.
+
+  - **Rumit**:
+    ```css
+    @import url("https://example.com/styles.css") screen and (max-width: 600px);
+    ```
+    - **Penjelasan**: Mengimpor file CSS eksternal hanya jika layar memiliki lebar maksimal 600px.
+    - **Hasil**: Gaya khusus diterapkan hanya pada perangkat mobile dengan layar kecil.
+
+### 3. **`@namespace`**
+
+- **Penjelasan**: Mendefinisikan namespace untuk elemen-elemen dalam CSS, berguna saat bekerja dengan XML atau SVG untuk menghindari konflik nama.
+
+- **Analogi**: `@namespace` seperti menetapkan aturan permainan untuk tim yang berbeda dalam kompetisi. Setiap tim memiliki aturan sendiri yang diterapkan hanya untuk mereka.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @namespace svg url("http://www.w3.org/2000/svg");
+    ```
+    - **Penjelasan**: Mendefinisikan namespace SVG untuk mengatur gaya pada elemen SVG.
+    - **Hasil**: Gaya yang diterapkan hanya berlaku untuk elemen SVG.
+
+  - **Sedang**:
+    ```css
+    @namespace math url("http://www.w3.org/1998/Math/MathML");
+    ```
+    - **Penjelasan**: Mendefinisikan namespace untuk MathML, memungkinkan penerapan gaya pada elemen matematika.
+    - **Hasil**: Gaya diterapkan khusus untuk elemen matematika.
+
+  - **Rumit**:
+    ```css
+    @namespace svg url("http://www.w3.org/2000/svg");
+    @namespace xlink url("http://www.w3.org/1999/xlink");
+    ```
+    - **Penjelasan**: Mendefinisikan beberapa namespace, memungkinkan pengaturan gaya untuk elemen SVG dan XLink.
+    - **Hasil**: Gaya diterapkan pada elemen yang menggunakan namespace berbeda.
+
+### 4. **`@media`**
+
+- **Penjelasan**: Mengatur gaya berdasarkan kondisi media, seperti ukuran layar atau orientasi. Ini berguna untuk membuat desain responsif.
+
+- **Analogi**: `@media` seperti membuat peraturan khusus untuk berbagai jenis kendaraan di jalan raya. Anda memiliki peraturan berbeda untuk mobil, sepeda, dan pejalan kaki.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @media screen and (max-width: 600px) {
+      body {
+        background-color: lightblue;
+      }
+    }
+    ```
+    - **Penjelasan**: Mengubah latar belakang halaman menjadi biru muda jika layar berukuran maksimal 600px.
+    - **Hasil**: Gaya khusus diterapkan pada perangkat mobile.
+
+  - **Sedang**:
+    ```css
+    @media (min-width: 768px) and (orientation: landscape) {
+      .container {
+        width: 80%;
+      }
+    }
+    ```
+    - **Penjelasan**: Mengatur lebar `.container` menjadi 80% jika layar minimal 768px dan orientasi landscape.
+    - **Hasil**: Gaya diterapkan pada tablet atau desktop dengan orientasi landscape.
+
+  - **Rumit**:
+    ```css
+    @media (prefers-color-scheme: dark) and (min-width: 1200px) {
+      body {
+        color: white;
+        background-color: black;
+      }
+    }
+    ```
+    - **Penjelasan**: Mengatur warna teks dan latar belakang menjadi putih dan hitam jika pengguna lebih suka mode gelap dan lebar layar minimal 1200px.
+    - **Hasil**: Gaya sesuai dengan preferensi pengguna dan ukuran layar besar.
+
+### 5. **`@supports`**
+
+- **Penjelasan**: Mengatur gaya hanya jika browser mendukung fitur tertentu, seperti Flexbox atau Grid. Ini berguna untuk fallback atau gaya alternatif.
+
+- **Analogi**: `@supports` seperti mengadakan audit untuk memastikan fasilitas tertentu tersedia sebelum memutuskan untuk menggunakannya.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @supports (display: grid) {
+      .grid-container {
+        display: grid;
+      }
+    }
+    ```
+    - **Penjelasan**: Menggunakan CSS Grid jika browser mendukung `display: grid`.
+    - **Hasil**: Elemen menggunakan grid layout jika fitur tersedia.
+
+  - **Sedang**:
+    ```css
+    @supports (display: flex) {
+      .flex-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    ```
+    - **Penjelasan**: Menggunakan Flexbox jika browser mendukung `display: flex`.
+    - **Hasil**: Layout menggunakan Flexbox dengan elemen yang terpusat.
+
+  - **Rumit**:
+    ```css
+    @supports (display: grid) and (not (grid-template-areas: "header header header")) {
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "header header header" "main main sidebar" "footer footer footer";
+      }
+    }
+    ```
+    - **Penjelasan**: Menggunakan CSS Grid dengan konfigurasi khusus jika browser mendukung Grid dan aturan grid-template-areas tidak sama.
+    - **Hasil**: Layout kompleks dengan area grid yang dinamis.
+
+### 6. **`@font-face`**
+
+- **Penjelasan**: Mendefinisikan font kustom untuk digunakan dalam halaman web. Ini memungkinkan penggunaan font yang tidak tersedia secara default di sistem.
+
+- **Analogi**: `@font-face` seperti mendatangkan font kustom ke perpustakaan Anda, sehingga Anda bisa menggunakan font tersebut dalam dokumen Anda.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @font-face {
+      font-family: "Arial";
+      src: url("arial.woff");
+    }
+    ```
+    - **Penjelasan**: Mendefinisikan font Arial menggunakan file WOFF.
+    - **Hasil**: Font Arial digunakan pada ele
+
+men yang ditentukan.
+
+  - **Sedang**:
+    ```css
+    @font-face {
+      font-family: "CustomFont";
+      src: url("customfont.woff2") format("woff2"),
+           url("customfont.woff") format("woff");
+    }
+    ```
+    - **Penjelasan**: Mendefinisikan font kustom dengan beberapa format untuk kompatibilitas.
+    - **Hasil**: Font kustom diterapkan dengan berbagai format untuk dukungan browser yang lebih baik.
+
+  - **Rumit**:
+    ```css
+    @font-face {
+      font-family: "ComplexFont";
+      src: url("complexfont.eot"); /* IE9 Compat Modes */
+      src: url("complexfont.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+           url("complexfont.woff2") format("woff2"), /* Super Modern Browsers */
+           url("complexfont.woff") format("woff"), /* Pretty Modern Browsers */
+           url("complexfont.ttf") format("truetype"), /* Safari, Android, iOS */
+           url("complexfont.svg#ComplexFont") format("svg"); /* Legacy iOS */
+      font-weight: normal;
+      font-style: normal;
+    }
+    ```
+    - **Penjelasan**: Mendefinisikan font kustom dengan banyak format untuk kompatibilitas penuh dengan berbagai browser dan perangkat.
+    - **Hasil**: Font kustom ditampilkan di berbagai browser dan perangkat dengan format yang sesuai.
+
+### 7. **`@keyframes`**
+
+- **Penjelasan**: Mendefinisikan animasi dengan langkah-langkah perubahan gaya dari satu titik waktu ke titik waktu lainnya.
+
+- **Analogi**: `@keyframes` seperti membuat storyboard untuk film animasi. Anda menentukan bagaimana karakter atau objek berubah sepanjang film.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @keyframes slide {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+    ```
+    - **Penjelasan**: Animasi slide dari kiri ke posisi normal.
+    - **Hasil**: Elemen bergerak horizontal saat animasi dijalankan.
+
+  - **Sedang**:
+    ```css
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+    ```
+    - **Penjelasan**: Animasi bouncing dengan beberapa langkah pergerakan vertikal.
+    - **Hasil**: Elemen memantul seperti bola dengan animasi berulang.
+
+  - **Rumit**:
+    ```css
+    @keyframes complexAnimation {
+      0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: rotate(180deg) scale(1.5);
+        opacity: 0.5;
+      }
+      100% {
+        transform: rotate(360deg) scale(1);
+        opacity: 1;
+      }
+    }
+    ```
+    - **Penjelasan**: Animasi kompleks dengan rotasi, skala, dan perubahan opacity.
+    - **Hasil**: Elemen berotasi penuh, membesar, dan memudar dalam siklus animasi.
+
+### 8. **`@page`**
+
+- **Penjelasan**: Mengatur gaya untuk halaman cetak, seperti margin, ukuran halaman, dan konten header/footer.
+
+- **Analogi**: `@page` seperti mengatur layout untuk dokumen cetak. Anda menentukan bagaimana halaman akan tampil saat dicetak.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @page {
+      margin: 1in;
+    }
+    ```
+    - **Penjelasan**: Mengatur margin halaman cetak menjadi 1 inci.
+    - **Hasil**: Margin sekitar halaman saat dicetak.
+
+  - **Sedang**:
+    ```css
+    @page {
+      margin: 1in;
+      size: A4;
+    }
+    ```
+    - **Penjelasan**: Mengatur margin dan ukuran halaman ke A4.
+    - **Hasil**: Halaman cetak berukuran A4 dengan margin 1 inci.
+
+  - **Rumit**:
+    ```css
+    @page {
+      margin: 1in;
+      size: A4 landscape;
+      @top-center {
+        content: "Page " counter(page);
+      }
+      @bottom-right {
+        content: "Confidential";
+      }
+    }
+    ```
+    - **Penjelasan**: Mengatur ukuran dan margin halaman, serta menambahkan header dan footer khusus.
+    - **Hasil**: Halaman A4 landscape dengan nomor halaman di tengah atas dan teks "Confidential" di kanan bawah.
+
+### 9. **`@counter-style`**
+
+- **Penjelasan**: Mendefinisikan gaya penomoran kustom untuk daftar. Anda menentukan bagaimana nomor atau simbol daftar akan ditampilkan.
+
+- **Analogi**: `@counter-style` seperti membuat sistem penomoran khusus untuk daftar. Anda memutuskan bagaimana angka atau huruf akan ditampilkan.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @counter-style decimal {
+      system: numeric;
+      symbols: "1" "2" "3" "4" "5" "6" "7" "8" "9" "10";
+    }
+    ```
+    - **Penjelasan**: Menentukan gaya penomoran desimal standar.
+    - **Hasil**: Menampilkan nomor daftar seperti 1, 2, 3, dst.
+
+  - **Sedang**:
+    ```css
+    @counter-style roman {
+      system: numeric;
+      symbols: "I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X";
+      suffix: ".";
+    }
+    ```
+    - **Penjelasan**: Menentukan gaya penomoran Romawi dengan akhiran titik.
+    - **Hasil**: Menampilkan nomor daftar seperti I., II., III., dst.
+
+  - **Rumit**:
+    ```css
+    @counter-style custom-counter {
+      system: numeric;
+      symbols: "a" "b" "c" "d" "e" "f" "g" "h" "i" "j";
+      suffix: ".";
+      prefix: "Item ";
+    }
+    ```
+    - **Penjelasan**: Mendefinisikan gaya penomoran kustom dengan awalan "Item" dan akhiran titik.
+    - **Hasil**: Menampilkan nomor daftar seperti Item a., Item b., Item c., dst.
+
+### 10. **`@document`** (deprecated)
+
+- **Penjelasan**: `@document` adalah aturan yang memungkinkan Anda mendefinisikan gaya CSS khusus untuk dokumen dengan URL tertentu. Ini berguna jika Anda ingin menerapkan gaya hanya pada halaman web yang memiliki URL spesifik. Namun, perlu dicatat bahwa `@document` sudah tidak digunakan lagi dalam spesifikasi CSS terbaru dan tidak didukung oleh browser modern.
+
+- **Analogi**: `@document` seperti membuat aturan khusus untuk dokumen tertentu di perpustakaan. Anda memberikan aturan yang hanya berlaku untuk buku tersebut.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @document url("https://example.com/") {
+      body {
+        background-color: lightgreen;
+      }
+    }
+    ```
+    - **Penjelasan**: Mengatur latar belakang halaman menjadi hijau muda hanya untuk URL tertentu.
+    - **Hasil**: Gaya hanya diterapkan pada halaman dari URL yang ditentukan.
+
+  - **Sedang**:
+    ```css
+    @document url("https://example.com/page.html") {
+      h1 {
+        color: blue;
+      }
+    }
+    ```
+    - **Penjelasan**: Mengubah warna teks `<h1>` menjadi biru untuk halaman yang ditentukan.
+    - **Hasil**: Gaya diterapkan hanya pada halaman dengan URL tertentu.
+
+  - **Rumit**:
+    ```css
+    @document url("https://example.com/") {
+      .header {
+        background-image: url("header-bg.jpg");
+      }
+      @page {
+        margin: 2cm;
+      }
+    }
+    ```
+    - **Penjelasan**: Menambahkan gambar latar belakang untuk elemen dengan kelas `.header` dan mengatur margin halaman cetak.
+    - **Hasil**: Halaman dengan gambar latar belakang khusus dan margin yang ditentukan untuk pencetakan.
+
+### 11. **`@viewport`**
+
+- **Penjelasan**: Mengatur ukuran dan pengaturan viewport pada perangkat, seperti zoom dan orientasi. Berguna untuk memastikan tampilan yang konsisten di berbagai perangkat.
+
+- **Analogi**: `@viewport` seperti mengatur pengaturan layar pada monitor atau TV. Anda menentukan bagaimana tampilan layar akan ditampilkan.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @viewport {
+      width: device-width;
+    }
+    ```
+    - **Penjelasan**: Mengatur lebar viewport sama dengan lebar perangkat.
+    - **Hasil**: Konten akan menyesuaikan dengan lebar perangkat, seperti smartphone atau tablet.
+
+  - **Sedang**:
+    ```css
+    @viewport {
+      width: device-width;
+      zoom: 1.5;
+    }
+    ```
+    - **Penjelasan**: Mengatur zoom viewport ke 1.5x dari ukuran default.
+    -
+
+ **Hasil**: Konten diperbesar 1.5 kali dari ukuran normal.
+
+  - **Rumit**:
+    ```css
+    @viewport {
+      width: device-width;
+      height: device-height;
+      zoom: 1;
+      orientation: landscape;
+    }
+    ```
+    - **Penjelasan**: Mengatur lebar dan tinggi viewport sesuai perangkat, dengan zoom default dan orientasi landscape.
+    - **Hasil**: Tampilan diatur dengan spesifikasi perangkat dan orientasi yang ditentukan.
+
+### 12. **`@supports`**
+
+- **Penjelasan**: Mengatur gaya hanya jika browser mendukung fitur tertentu, seperti Flexbox atau Grid. Ini berguna untuk fallback atau gaya alternatif.
+
+- **Analogi**: `@supports` seperti mengadakan audit untuk memastikan fasilitas tertentu tersedia sebelum memutuskan untuk menggunakannya.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @supports (display: grid) {
+      .grid-container {
+        display: grid;
+      }
+    }
+    ```
+    - **Penjelasan**: Menggunakan CSS Grid jika browser mendukung `display: grid`.
+    - **Hasil**: Elemen menggunakan grid layout jika fitur tersedia.
+
+  - **Sedang**:
+    ```css
+    @supports (display: flex) {
+      .flex-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    ```
+    - **Penjelasan**: Menggunakan Flexbox jika browser mendukung `display: flex`.
+    - **Hasil**: Layout menggunakan Flexbox dengan elemen yang terpusat.
+
+  - **Rumit**:
+    ```css
+    @supports (display: grid) and (not (grid-template-areas: "header header header")) {
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "header header header" "main main sidebar" "footer footer footer";
+      }
+    }
+    ```
+    - **Penjelasan**: Menggunakan CSS Grid dengan konfigurasi khusus jika browser mendukung Grid dan aturan grid-template-areas tidak sama.
+    - **Hasil**: Layout kompleks dengan area grid yang dinamis.
+
+### 13. **`@container`** (Experimental)
+
+- **Penjelasan**: `@container` adalah aturan eksperimental dalam CSS yang memungkinkan Anda mendefinisikan aturan gaya berdasarkan ukuran kontainer daripada ukuran viewport. Ini berguna untuk membuat desain responsif yang bergantung pada ukuran elemen kontainer.
+
+- **Analogi**: `@container` seperti menentukan aturan dalam ruangan tertentu berdasarkan ukuran ruangan tersebut. Misalnya, Anda dapat membuat peraturan khusus jika ukuran ruangan berubah.
+
+- **Contoh**:
+
+  - **Biasa**:
+    ```css
+    @container (min-width: 500px) {
+      .box {
+        background-color: lightblue;
+      }
+    }
+    ```
+    - **Penjelasan**: Mengubah warna latar belakang elemen `.box` menjadi biru muda jika lebar kontainer minimal 500px.
+    - **Hasil**: Warna latar belakang berubah jika kontainer memiliki lebar yang ditentukan.
+
+  - **Sedang**:
+    ```css
+    @container (min-width: 600px) and (max-width: 800px) {
+      .box {
+        font-size: 1.2em;
+      }
+    }
+    ```
+    - **Penjelasan**: Mengatur ukuran font elemen `.box` jika lebar kontainer berada dalam rentang 600px hingga 800px.
+    - **Hasil**: Ukuran font berubah sesuai dengan ukuran kontainer yang ditentukan.
+
+  - **Rumit**:
+    ```css
+    @container (min-width: 500px) {
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .item {
+        background-color: lightcoral;
+        padding: 10px;
+      }
+      @container (min-width: 800px) {
+        .item {
+          background-color: lightgreen;
+          grid-column: span 2;
+        }
+      }
+    }
+    ```
+    - **Penjelasan**: Mengatur layout grid dan gaya elemen `.item` di dalam kontainer jika lebar kontainer minimal 500px, dan mengubah gaya elemen `.item` jika lebar kontainer minimal 800px.
+    - **Hasil**: Layout grid dengan perubahan gaya berdasarkan ukuran kontainer yang berbeda.
+
+    `@container` adalah fitur eksperimental dan mungkin tidak didukung secara universal di semua browser saat ini, jadi pastikan untuk memeriksa kompatibilitas sebelum menggunakannya dalam proyek produksi.
+---
+
+Dengan penjelasan, analogi, contoh, dan hasil di atas, Anda dapat memahami berbagai at-rules CSS dan cara penggunaannya dalam pengaturan gaya halaman web.
