@@ -156,3 +156,10 @@ Berikut ini adalah file `fungsi-perintah.md` yang berisi **tabel dengan 100 peri
 | 148    | `git stash list`                             | Menampilkan daftar perubahan yang disimpan di stash.                                         |
 | 149    | `git stash drop`                             | Menghapus stash dari daftar.                                                                 |
 | 150    | `git reset --hard origin/master`             | Mengembalikan cabang lokal ke keadaan yang sama dengan cabang `master` di remote.             |
+
+
+##
+## buatan sendiri
+find -type f -name "*:Zone.Identifier" -delete
+
+bagus ini buat hapus semua zone identi fire
