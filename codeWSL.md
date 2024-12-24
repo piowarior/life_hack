@@ -160,6 +160,10 @@ Berikut ini adalah file `fungsi-perintah.md` yang berisi **tabel dengan 100 peri
 
 ##
 ## buatan sendiri
+
+### bagus ini buat hapus semua zone identi fire
 find -type f -name "*:Zone.Identifier" -delete
 
-bagus ini buat hapus semua zone identi fire
+
+### buatliat ukuran file fokder kita
+du -sh
